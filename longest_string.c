@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
     else if(argc == 2)
     {
-        puts(argv[1]);
+        printf("%s",argv[1]);
     }
 
     else if(argc > 2)
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
                 break;
             }
         }
-       puts(argv[1]);
+       printf("%s",argv[1]);
     }
     return EXIT_SUCCESS;
 }

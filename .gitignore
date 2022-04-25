@@ -1,0 +1,4 @@
+*.o
+*.json
+longest_string.exe
+longest_string

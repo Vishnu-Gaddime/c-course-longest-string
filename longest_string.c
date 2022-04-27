@@ -4,27 +4,22 @@
 
 int main(int argc, char *argv[])
 {
-    if(argc == 1)
+    if (argc == 1)
     {
         puts("");
     }
 
-    else if(argc == 2)
-    {
-        printf("%s",argv[1]);
-    }
-
-    else if(argc > 2)
-    {
-        for(int i = 1; i < argc; i++)
+    else
+    { 
+        int longestWordIndex = 1;
+        for (int i = 1; i < argc; i++)
         {
-            if(strlen(argv[1]) < strlen(argv[i]));
+            if (strlen(argv[longestWordIndex]) < strlen(argv[i]))
             {
-                argv[1] = argv[i];
-                break;
+                longestWordIndex = i;
             }
         }
-       printf("%s",argv[1]);
+       puts(argv[longestWordIndex]);
     }
     return EXIT_SUCCESS;
 }

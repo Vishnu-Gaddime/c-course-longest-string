@@ -8,18 +8,15 @@ int main(int argc, char *argv[])
     {
         puts("");
     }
-
-    else
-    { 
-        int longestWordIndex = 1;
-        for (int i = 1; i < argc; i++)
+ 
+    int longestWordIndex = 1;
+    for (int i = 1; i < argc; i++)
+    {
+        if (strlen(argv[longestWordIndex]) < strlen(argv[i]))
         {
-            if (strlen(argv[longestWordIndex]) < strlen(argv[i]))
-            {
-                longestWordIndex = i;
-            }
+            longestWordIndex = i;
         }
-       puts(argv[longestWordIndex]);
     }
+    puts(argv[longestWordIndex]);
     return EXIT_SUCCESS;
 }

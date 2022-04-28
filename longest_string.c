@@ -12,7 +12,10 @@ int main( int argc, char *argv[] )
             longestWordIndex = i;
             puts(argv[longestWordIndex]);
         }
+        else
+        {
+            puts("");
+        }
     }
-    puts("");
     return EXIT_SUCCESS;
 }

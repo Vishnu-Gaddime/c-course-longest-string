@@ -3,19 +3,22 @@
 #include <string.h>
 
 int main( int argc, char *argv[] )
-{ 
-    int longestWordIndex = 1;
-    for ( int i = 2; i < argc; i++ )
+{
+    if (argc > 1)
     {
-        if ( strlen(argv[longestWordIndex]) < strlen(argv[i]) )
+        int longestWordIndex = 1;
+        for ( int i = 2; i < argc; i++ )
         {
-            longestWordIndex = i;
-            puts(argv[longestWordIndex]);
+            if ( strlen(argv[longestWordIndex]) < strlen(argv[i]) )
+            {
+                longestWordIndex = i;
+            }
         }
-        else
-        {
-            puts("");
-        }
+        puts(argv[longestWordIndex]);
+    }
+    else
+    {
+        puts("");
     }
     return EXIT_SUCCESS;
 }
